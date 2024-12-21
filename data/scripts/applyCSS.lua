@@ -7,9 +7,7 @@ local placeholders = {
 
 function create()
 	local char = placeholders[global.selectedCharacter]
-	for _,k in pairs(keys) do
-		if PlayState.SONG[k] == name then
-			PlayState.SONG[k] = char
-		end
+	if char == PlayState.SONG.player1 then
+		PlayState.SONG.player1 = global.selectedCharacter
 	end
 end
